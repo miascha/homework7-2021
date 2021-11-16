@@ -5,23 +5,23 @@ window.addEventListener("load", function() {
 
 });
 
-document.querySelector("#play").addEventListener("click", function() {
-	console.log("Play Video");
+document.querySelector("#play").addEventListener("click", function PlayVideo() {
 	video.play()
 	document.getElementById("volume").innerHTML=video.volume*100+"%";
+	console.log("Play Video");
 });
 
-document.querySelector("#pause").addEventListener("click", function() {
+document.querySelector("#pause").addEventListener("click", function PauseVideo() {
 	console.log("Pause Video");
 	video.pause()
 	});
 
-document.querySelector("#slower").addEventListener("click", function() {
+document.querySelector("#slower").addEventListener("click", function SlowDown() {
 	console.log(video.playbackRate);
 	video.playbackRate-=0.05;
 });
 
-document.querySelector("#faster").addEventListener("click", function() {
+document.querySelector("#faster").addEventListener("click", function SpeedUp() {
 	console.log(video.playbackRate);
 	video.playbackRate+=0.05;
 });

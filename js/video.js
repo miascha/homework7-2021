@@ -29,17 +29,17 @@ document.querySelector("#faster").addEventListener("click", function() {
 	console.log("The new faster playback speed is " + video.playbackRate + " seconds");
 });
 
-document.querySelector('#skip').addEventListener("click", function(){
-	console.log("The original location of the video was " + video.currentTime + " seconds");
+// ----ERROR!!!!!!
+// -6: Video not skipping ahead by the right amount and/or not restarting correctly.
 
-	if (video.currentTime < video.duration - 15) {
-		video.currentTime+=15;
-		console.log("The videos is currently at " + video.currentTime + " seconds");
-	}
-	
-	if (video.currentTime>=video.duration - 15){
+document.querySelector('#skip').addEventListener("click", function(){
+	console.log("The video was at " + video.currentTime + " seconds");
+	video.currentTime+=15;
+	console.log("The videos is now at " + video.currentTime + " seconds");
+
+	if (video.currentTime>=video.duration){
 		video.currentTime=0;
-		console.log("The videos is restarting from the beginning and currently at " + video.currentTime);
+		console.log("The videos is restarting from the beginning and currently at " + video.currentTime + " seconds");
 	}
 });
 

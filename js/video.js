@@ -26,15 +26,15 @@ document.querySelector("#slower").addEventListener("click", function SlowDown() 
 
 document.querySelector("#faster").addEventListener("click", function SpeedUp() {
 	video.playbackRate = video.playbackRate * 1.05;
-	console.log("The new faster playback speed is " + video.playbackRate);
+	console.log("The new faster playback speed is " + video.playbackRate + " seconds");
 });
 
 document.querySelector('#skip').addEventListener("click", function(){
-	console.log("The original location of the video is " + video.currentTime);
+	console.log("The original location of the video was " + video.currentTime + " seconds");
 
-	if (video.currentTime < video.currentTime - 15) {
+	if (video.currentTime < video.duration - 15) {
 		video.currentTime+=15;
-		console.log("The videos is currently at " + video.currentTime);
+		console.log("The videos is currently at " + video.currentTime + " seconds");
 	}
 	
 	if (video.currentTime>=video.duration - 15){

@@ -8,23 +8,23 @@ window.addEventListener("load", function() {
 
 });
 
-document.querySelector("#play").addEventListener("click", function PlayVideo() {
+document.querySelector("#play").addEventListener("click", function() {
 	video.play()
 	voloutput.innerHTML = volslider.value + "%";						
 	console.log("Play Video");
 });
 
-document.querySelector("#pause").addEventListener("click", function PauseVideo() {
+document.querySelector("#pause").addEventListener("click", function() {
 	video.pause()
 	console.log("Pause Video");
 	});
 
-document.querySelector("#slower").addEventListener("click", function SlowDown() {
+document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate * .95;
 	console.log("The new slower playback speed is " + video.playbackRate);
 });
 
-document.querySelector("#faster").addEventListener("click", function SpeedUp() {
+document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate * 1.05;
 	console.log("The new faster playback speed is " + video.playbackRate + " seconds");
 });
